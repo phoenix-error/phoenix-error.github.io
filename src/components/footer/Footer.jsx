@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
 
         <span className="footer__copy">
-          &#169; pheonix-error. All rigths reserved
+          &#169; Luca Becker. All rigths reserved
         </span>
       </div>
     </footer>
