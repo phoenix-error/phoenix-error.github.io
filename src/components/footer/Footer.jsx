@@ -29,23 +29,23 @@ const Footer = () => {
 
         <div className="footer__social">
           <a
-            href="https://www.facebook.com/"
+            href="https://medium.com/@phoenix-dev"
             className="footer__social-link"
             target="_blank" rel="noreferrer"
           >
-            <i className="bx bxl-facebook"></i>
+            <i className="bx bxl-medium"></i>
           </a>
 
           <a
-            href="https://www.instagram.com/"
+            href="https://github.com/phoenix-error"
             className="footer__social-link"
             target="_blank" rel="noreferrer"
           >
-            <i className="bx bxl-instagram"></i>
+            <i className="bx bxl-github"></i>
           </a>
 
           <a
-            href="https://twitter.com/"
+            href="https://twitter.com/Phoenix_dev_"
             className="footer__social-link"
             target="_blank" rel="noreferrer"
           >
