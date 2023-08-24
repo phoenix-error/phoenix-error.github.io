@@ -45,13 +45,9 @@
   margin-bottom: var(--mb-0-5);
 }
 
-.work__button {
-  width: max-content;
-  color: var(--text-color);
-  font-size: var(--small-font-size);
-  display: flex;
-  align-items: center;
-  column-gap: 0.25rem;
+.work__description {
+  max-width: 200px;
+  font-size: var(--smaller-font-size);
 }
 
 .work__button-icon {
