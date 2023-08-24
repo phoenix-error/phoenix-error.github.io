@@ -4,28 +4,30 @@ const Social = () => {
   return (
     <div className="home__social">
       <a
-        href="https://www.instagram.com/"
+        href="https://medium.com/@phoenix-dev"
         className="home__social-icon"
-        target="_blank"
+        target="_blank" rel="noreferrer"
       >
-        <i className="uil uil-instagram"></i>
+        <i className="uil uil-medium-m"></i>
       </a>
 
       <a
-        href="https://dribbble.com/"
+        href="https://github.com/phoenix-error"
         className="home__social-icon"
-        target="_blank"
-      >
-        <i className="uil uil-dribbble"></i>
-      </a>
-
-      <a
-        href="https://github.com/"
-        className="home__social-icon"
-        target="_blank"
+        target="_blank" rel="noreferrer"
       >
         <i className="uil uil-github-alt"></i>
       </a>
+
+      <a
+        href="https://twitter.com/Phoenix_dev_"
+        className="home__social-icon"
+        target="_blank" rel="noreferrer"
+      >
+        <i className="uil uil-twitter"></i>
+      </a>
+
+      
     </div>
   );
 };

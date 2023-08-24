@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import AboutImg from "../../assets/about.jpg";
+import AboutImg from "../../assets/about.png";
 import CV from "../../assets/Smith-Cv.pdf";
 import Info from "./Info";
 
@@ -17,9 +17,7 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Frontend developer, I create web pages with UI / UX user interface,
-            I have years of experience and many clients are happy with the
-            projects carried out.
+            I am a app developer and full time student. Enjoying life and a life long learner.
           </p>
 
           <a download="" href={CV} className="button button--flex">
