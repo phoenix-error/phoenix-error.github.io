@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import './App.css';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
@@ -8,6 +9,9 @@ import Work from './components/Portfolio/Work';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
+
+const TRACKING_ID = process.env.GOOGLE_ANALYTICS_ID; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
 	return (

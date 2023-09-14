@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './header.css';
+import { useAnalyticsEventTracker } from '../../useAnalyticsEventTracker';
 
 const Header = () => {
 	const [scrolling, setScrolling] = useState(false);
@@ -13,6 +14,8 @@ const Header = () => {
 		{ href: '#portfolio', text: 'Portfolio', icon: 'scenery' },
 		{ href: '#contact', text: 'Contact', icon: 'message' },
 	];
+
+	const eventTracker = useAnalyticsEventTracker('Header');
 
 	return (
 		<header className={`header ${scrolling ? 'scroll-header' : ''}`}>
@@ -28,7 +31,10 @@ const Header = () => {
 							<li className="nav__item" key={item.href}>
 								<a
 									href={item.href}
-									onClick={() => setActiveNav(item.href)}
+									onClick={() => {
+										setActiveNav(item.href);
+										eventTracker('Clicked', item.href);
+									}}
 									className={`${
 										activeNav === item.href
 											? 'nav__link active-link'
