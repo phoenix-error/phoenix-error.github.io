@@ -1,5 +1,5 @@
-'use client';
 import { useEffect, useState } from 'react';
+import './header.css';
 
 const Header = () => {
 	const [scrolling, setScrolling] = useState(false);
@@ -35,7 +35,8 @@ const Header = () => {
 											: 'nav__link'
 									}`}
 								>
-									<i className={`uil uil-${item.icon} hidden`}></i> {item.text}
+									<i className={`uil uil-${item.icon} nav__icon`}></i>{' '}
+									{item.text}
 								</a>
 							</li>
 						))}
