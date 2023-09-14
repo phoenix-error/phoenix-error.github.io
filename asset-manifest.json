@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6993166.css",
-    "main.js": "/static/js/main.a782b846.js",
+    "main.css": "/static/css/main.af6bd4c5.css",
+    "main.js": "/static/js/main.92b0bce9.js",
     "static/media/MinimaFinance.png": "/static/media/MinimaFinance.76f9de8d04c250431550.png",
     "static/media/about.png": "/static/media/about.0d60a817f293799e1ae0.png",
     "static/media/profile.png": "/static/media/profile.0d60a817f293799e1ae0.png",
@@ -11,11 +11,11 @@
     "static/media/work3.jpg": "/static/media/work3.135e9065694bc13dc31d.jpg",
     "static/media/Smith-Cv.pdf": "/static/media/Smith-Cv.e83747cf513e0b21a7f1.pdf",
     "index.html": "/index.html",
-    "main.d6993166.css.map": "/static/css/main.d6993166.css.map",
-    "main.a782b846.js.map": "/static/js/main.a782b846.js.map"
+    "main.af6bd4c5.css.map": "/static/css/main.af6bd4c5.css.map",
+    "main.92b0bce9.js.map": "/static/js/main.92b0bce9.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6993166.css",
-    "static/js/main.a782b846.js"
+    "static/css/main.af6bd4c5.css",
+    "static/js/main.92b0bce9.js"
   ]
 }
