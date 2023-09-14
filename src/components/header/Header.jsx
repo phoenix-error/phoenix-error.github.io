@@ -1,107 +1,58 @@
-import React, { useState } from "react";
-import "./header.css";
+'use client';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
-  /*=============== Change Background Header ===============*/
-  window.addEventListener("scroll", function () {
-    const header = document.querySelector(".header");
-    // when the scroll is higher than 200 viewport height, add the scroll-header class to a tag with the header tag
-    if (this.scrollY >= 80) header.classList.add("scroll-header");
-    else header.classList.remove("scroll-header");
-  });
+	const [scrolling, setScrolling] = useState(false);
+	const [toggle, setToggle] = useState(false);
+	const [activeNav, setActiveNav] = useState('#home');
 
-  /*=============== Toggle Menu ===============*/
-  const [Toggle, showMenu] = useState(false);
-  const [activeNav, setActiveNav] = useState("#home");
+	const navItems = [
+		{ href: '#home', text: 'Home', icon: 'estate' },
+		{ href: '#about', text: 'About', icon: 'user' },
+		{ href: '#skills', text: 'Skills', icon: 'file-alt' },
+		{ href: '#portfolio', text: 'Portfolio', icon: 'scenery' },
+		{ href: '#contact', text: 'Contact', icon: 'message' },
+	];
 
-  return (
-    <header className="header">
-      <nav className="nav container">
-        <a href="index.html" className="nav__logo">
-          Luca Becker
-        </a>
+	return (
+		<header className={`header ${scrolling ? 'scroll-header' : ''}`}>
+			<nav className="nav container">
+				<a href="index.html" className="nav__logo">
+					Luca Becker
+				</a>
 
-        <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
-          <ul className="nav__list grid">
-            <li className="nav__item">
-              <a
-                href="#home"
-                onClick={() => setActiveNav("#home")}
-                className={
-                  activeNav === "#home" ? "nav__link active-link" : "nav__link"
-                }
-              >
-                <i className="uil uil-estate nav__icon"></i> Home
-              </a>
-            </li>
+				<div className={`nav__menu ${toggle ? 'show-menu' : ''}`}>
+					<ul className="nav__list grid">
+						{/* Map over your navigation items */}
+						{navItems.map((item) => (
+							<li className="nav__item" key={item.href}>
+								<a
+									href={item.href}
+									onClick={() => setActiveNav(item.href)}
+									className={`${
+										activeNav === item.href
+											? 'nav__link active-link'
+											: 'nav__link'
+									}`}
+								>
+									<i className={`uil uil-${item.icon} hidden`}></i> {item.text}
+								</a>
+							</li>
+						))}
+					</ul>
 
-            <li className="nav__item">
-              <a
-                href="#about"
-                onClick={() => setActiveNav("#about")}
-                className={
-                  activeNav === "#about" ? "nav__link active-link" : "nav__link"
-                }
-              >
-                <i className="uil uil-user nav__icon"></i> About
-              </a>
-            </li>
+					<i
+						className="uil uil-times nav__close"
+						onClick={() => setToggle(!toggle)}
+					></i>
+				</div>
 
-            <li className="nav__item">
-              <a
-                href="#skills"
-                onClick={() => setActiveNav("#skills")}
-                className={
-                  activeNav === "#skills"
-                    ? "nav__link active-link"
-                    : "nav__link"
-                }
-              >
-                <i className="uil uil-file-alt nav__icon"></i> Skills
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a
-                href="#portfolio"
-                onClick={() => setActiveNav("#portfolio")}
-                className={
-                  activeNav === "#portfolio"
-                    ? "nav__link active-link"
-                    : "nav__link"
-                }
-              >
-                <i className="uil uil-scenery nav__icon"></i> Portfolio
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a
-                href="#contact"
-                onClick={() => setActiveNav("#contact")}
-                className={
-                  activeNav === "#contact"
-                    ? "nav__link active-link"
-                    : "nav__link"
-                }
-              >
-                <i className="uil uil-message nav__icon"></i> Contact
-              </a>
-            </li>
-          </ul>
-
-          <i
-            className="uil uil-times nav__close"
-            onClick={() => showMenu(!Toggle)}
-          ></i>
-        </div>
-
-        <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-          <i className="uil uil-apps"></i>
-        </div>
-      </nav>
-    </header>
-  );
+				<div className="nav__toggle" onClick={() => setToggle(!toggle)}>
+					<i className="uil uil-apps"></i>
+				</div>
+			</nav>
+		</header>
+	);
 };
 
 export default Header;
