@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './header.css';
+import ReactGA from 'react-ga4';
 import { useAnalyticsEventTracker } from '../../useAnalyticsEventTracker';
 
 const Header = () => {
