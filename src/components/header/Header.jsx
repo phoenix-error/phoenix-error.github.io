@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './header.css';
-import ReactGA from 'react-ga4';
 import { useAnalyticsEventTracker } from '../../useAnalyticsEventTracker';
 
 const Header = () => {
-	const [scrolling, setScrolling] = useState(false);
 	const [toggle, setToggle] = useState(false);
 	const [activeNav, setActiveNav] = useState('#home');
 
@@ -19,7 +17,7 @@ const Header = () => {
 	const eventTracker = useAnalyticsEventTracker('Header');
 
 	return (
-		<header className={`header ${scrolling ? 'scroll-header' : ''}`}>
+		<header className={`header`}>
 			<nav className="nav container">
 				<a href="index.html" className="nav__logo">
 					Luca Becker

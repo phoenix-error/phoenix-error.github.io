@@ -9,6 +9,7 @@ import Work from './components/Portfolio/Work';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
+import Blog from './components/blog/Blog';
 
 const TRACKING_ID = process.env.GOOGLE_ANALYTICS_ID; // OUR_TRACKING_ID
 ReactGA.initialize([
@@ -25,6 +26,7 @@ const App = () => {
 			<main className="main">
 				<Home />
 				<About />
+				<Blog />
 				<Skills />
 				{/** <Services /> */}
 				<Work />
